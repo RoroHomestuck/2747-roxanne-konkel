@@ -42,6 +42,7 @@ namespace Bookstore_App.UI
             NewProductForm newProductForm = new();
             newProductForm.StartPosition = FormStartPosition.CenterScreen;
             products.Add(newProductForm.GetNewProduct());
+            ProductDatabase.SaveProducts(products);
             renderList();
         }
 
@@ -62,6 +63,7 @@ namespace Bookstore_App.UI
                 if (result == DialogResult.Yes)
                 {
                     products.Remove(selectedProduct);
+                    ProductDatabase.SaveProducts(products);
                     renderList();
                 }
             }
