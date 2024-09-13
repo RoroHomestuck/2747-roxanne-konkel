@@ -88,7 +88,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -120,6 +119,9 @@
             customersLabel.Size = new Size(298, 72);
             customersLabel.TabIndex = 1;
             customersLabel.Text = "Customers";
+            customersLabel.Click += customersLabel_Click;
+            customersLabel.MouseLeave += customerLabel_MouseLeave;
+            customersLabel.MouseHover += customerLabel_MouseHover;
             // 
             // pictureBox2
             // 

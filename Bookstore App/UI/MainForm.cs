@@ -23,10 +23,21 @@ namespace Bookstore_App.UI
         {
             productsLabel.ForeColor = Color.Black;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void customerLabel_MouseHover(object sender, EventArgs e)
         {
+            customersLabel.ForeColor = Color.Blue;
+        }
 
+        private void customerLabel_MouseLeave(object sender, EventArgs e)
+        {
+            customersLabel.ForeColor = Color.Black;
+        }
+
+        private void customersLabel_Click(object sender, EventArgs e)
+        {
+            CustomersForm customerForm = new();
+            customerForm.StartPosition = FormStartPosition.CenterParent;
+            customerForm.ShowDialog();
         }
     }
 }
