@@ -56,6 +56,7 @@
             saveButton.TabIndex = 1;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // skuLabel
             // 

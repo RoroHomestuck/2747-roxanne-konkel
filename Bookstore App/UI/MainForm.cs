@@ -10,6 +10,7 @@ namespace Bookstore_App.UI
         private void productsLabel_Click(object sender, EventArgs e)
         {
             ProductsForm productForm = new();
+            productForm.StartPosition = FormStartPosition.CenterParent;
             productForm.ShowDialog();
         }
 

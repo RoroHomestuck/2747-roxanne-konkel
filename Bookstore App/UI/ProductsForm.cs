@@ -20,10 +20,29 @@ namespace Bookstore_App.UI
             InitializeComponent();
         }
 
+        private void ProductsForm_Load(object sender, EventArgs e)
+        {
+            products = ProductDatabase.GetProducts();
+
+            renderList();
+        }
+
+        private void renderList()
+        {
+            productsListBox.Items.Clear();
+
+            foreach (Product product in products)
+            {
+                productsListBox.Items.Add(product);
+            }
+        }
+
         private void addButton_Click(object sender, EventArgs e)
         {
             NewProductForm newProductForm = new();
-            newProductForm.ShowDialog();
+            newProductForm.StartPosition = FormStartPosition.CenterScreen;
+            products.Add(newProductForm.GetNewProduct());
+            renderList();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -33,20 +52,24 @@ namespace Bookstore_App.UI
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to delete this?", "Confirm Delete",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        }
+            Product selectedProduct = productsListBox.SelectedItem as Product;
 
-        private void ProductsForm_Load(object sender, EventArgs e)
-        {
-            products = ProductDatabase.GetProducts();
-
-            productsListBox.Items.Clear();
-
-            foreach (Product product in products)
+            if (selectedProduct != null)
             {
-                productsListBox.Items.Add(product);
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {selectedProduct.Description}?", "Confirm Delete",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    products.Remove(selectedProduct);
+                    renderList();
+                }
             }
+            else
+            {
+                MessageBox.Show("Please select a product", "Select a Product to delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }
