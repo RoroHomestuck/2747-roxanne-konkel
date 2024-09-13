@@ -16,5 +16,16 @@ namespace Bookstore_App.UI
         {
             InitializeComponent();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            NewProductForm newProductForm = new();
+            newProductForm.ShowDialog();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
