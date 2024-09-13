@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panel1 = new Panel();
             label2 = new Label();
             productsLabel = new Label();
@@ -44,6 +45,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(productsLabel);
             panel1.Controls.Add(pictureBox1);
@@ -78,14 +80,19 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlDark;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(332, 239);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(label3);
             panel2.Controls.Add(customersLabel);
             panel2.Controls.Add(pictureBox2);
@@ -117,9 +124,12 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlDark;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(332, 239);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
