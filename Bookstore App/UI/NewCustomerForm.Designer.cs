@@ -43,21 +43,21 @@
             lnameTextBox.Location = new Point(94, 61);
             lnameTextBox.Name = "lnameTextBox";
             lnameTextBox.Size = new Size(100, 23);
-            lnameTextBox.TabIndex = 15;
+            lnameTextBox.TabIndex = 2;
             // 
             // emailTextBox
             // 
             emailTextBox.Location = new Point(94, 103);
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(100, 23);
-            emailTextBox.TabIndex = 14;
+            emailTextBox.TabIndex = 3;
             // 
             // fnameTextBox
             // 
             fnameTextBox.Location = new Point(94, 16);
             fnameTextBox.Name = "fnameTextBox";
             fnameTextBox.Size = new Size(100, 23);
-            fnameTextBox.TabIndex = 13;
+            fnameTextBox.TabIndex = 1;
             // 
             // emailLabel
             // 
@@ -91,7 +91,7 @@
             saveButton.Location = new Point(102, 137);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 23);
-            saveButton.TabIndex = 9;
+            saveButton.TabIndex = 5;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
@@ -101,7 +101,7 @@
             cancelButton.Location = new Point(21, 137);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 23);
-            cancelButton.TabIndex = 8;
+            cancelButton.TabIndex = 4;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;

@@ -19,10 +19,14 @@ namespace Bookstore_App.DataAccess
         {
             var products = new List<Product>();
 
+            using StreamReader reader = new(
+                new FileStream(
+                    Path.Combine(path, fileName),
+                    FileMode.OpenOrCreate,
+                    FileAccess.Read)
+                );
 
-            using StreamReader reader = new(Path.Combine(path, fileName));
-
-            while(reader.Peek() != -1)
+            while (reader.Peek() != -1)
             {
                 string line = reader.ReadLine();
                 string[] parts = line.Split(seperator);
@@ -43,8 +47,9 @@ namespace Bookstore_App.DataAccess
 
         public static void SaveProducts(List<Product> products)
         {
-            using StreamWriter sw = new StreamWriter(Path.Combine(path, fileName));
-            
+            using StreamWriter sw = new StreamWriter(new FileStream(Path.Combine(path, fileName), FileMode.Create, FileAccess.Write));
+
+
                 foreach (Product product in products)
                 {
                     sw.Write(product.SKU + seperator);

@@ -35,6 +35,7 @@ namespace Bookstore_App.UI
             {
                 productsListBox.Items.Add(product);
             }
+
         }
 
         private void addButton_Click(object sender, EventArgs e)

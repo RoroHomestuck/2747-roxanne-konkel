@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,8 +28,11 @@ namespace Bookstore_App.UI
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+
             customer = new()
             {
+                Id = rnd.Next(0, 10),
                 FName = fnameTextBox.Text,
                 LName = lnameTextBox.Text,
                 Email = emailTextBox.Text

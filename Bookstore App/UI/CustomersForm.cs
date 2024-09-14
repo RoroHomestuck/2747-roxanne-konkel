@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Bookstore_App.UI
 
             customers = CustomerDatabase.GetCustomers();
 
+
             renderList();
         }
 
@@ -36,6 +38,7 @@ namespace Bookstore_App.UI
             {
                 customersListBox.Items.Add(customer);
             }
+
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -75,6 +78,22 @@ namespace Bookstore_App.UI
                 MessageBox.Show("Please select a customer", "Select a Customer to delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void invoicesButton_Click(object sender, EventArgs e)
+        {
+            Customer selectedCustomer = customersListBox.SelectedItem as Customer;
+
+            if (selectedCustomer != null)
+            {
+                CustomerInvoicesForm customerInvoicesForm = new();
+                customerInvoicesForm.StartPosition = FormStartPosition.CenterParent;
+                customerInvoicesForm.ShowInvoices(selectedCustomer);
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer", "Select a Customer to view", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

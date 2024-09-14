@@ -43,7 +43,7 @@
             cancelButton.Location = new Point(21, 139);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 23);
-            cancelButton.TabIndex = 0;
+            cancelButton.TabIndex = 4;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;
@@ -53,7 +53,7 @@
             saveButton.Location = new Point(102, 139);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 23);
-            saveButton.TabIndex = 1;
+            saveButton.TabIndex = 5;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
@@ -90,21 +90,21 @@
             skuTextBox.Location = new Point(94, 18);
             skuTextBox.Name = "skuTextBox";
             skuTextBox.Size = new Size(100, 23);
-            skuTextBox.TabIndex = 5;
+            skuTextBox.TabIndex = 1;
             // 
             // priceTextBox
             // 
             priceTextBox.Location = new Point(94, 105);
             priceTextBox.Name = "priceTextBox";
             priceTextBox.Size = new Size(100, 23);
-            priceTextBox.TabIndex = 6;
+            priceTextBox.TabIndex = 3;
             // 
             // descriptionTextBox
             // 
             descriptionTextBox.Location = new Point(94, 63);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(100, 23);
-            descriptionTextBox.TabIndex = 7;
+            descriptionTextBox.TabIndex = 2;
             // 
             // NewProductForm
             // 

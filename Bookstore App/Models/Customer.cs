@@ -13,9 +13,17 @@ namespace Bookstore_App.Models
         public string LName { get; set; } = "";
         public string Email { get; set; } = "";
 
+        public string FullName
+        {
+            get
+            {
+                return $"{FName} {LName}";
+            }
+        }
+
         public override string ToString()
         {
-            return $"{FName} {LName}, {Email}";
+            return $"[{Id}] {FName} {LName}, {Email}";
         }
     }
 }

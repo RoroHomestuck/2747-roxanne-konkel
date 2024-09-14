@@ -37,10 +37,16 @@
             label3 = new Label();
             customersLabel = new Label();
             pictureBox2 = new PictureBox();
+            panel3 = new Panel();
+            label1 = new Label();
+            invoicesLabel = new Label();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -117,7 +123,7 @@
             customersLabel.Location = new Point(3, 242);
             customersLabel.Name = "customersLabel";
             customersLabel.Size = new Size(298, 72);
-            customersLabel.TabIndex = 1;
+            customersLabel.TabIndex = 2;
             customersLabel.Text = "Customers";
             customersLabel.Click += customersLabel_Click;
             customersLabel.MouseLeave += customerLabel_MouseLeave;
@@ -135,11 +141,58 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(invoicesLabel);
+            panel3.Controls.Add(pictureBox3);
+            panel3.Location = new Point(742, 12);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(332, 426);
+            panel3.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(20, 314);
+            label1.Name = "label1";
+            label1.Size = new Size(244, 28);
+            label1.TabIndex = 2;
+            label1.Text = "Manage the list of invoices";
+            // 
+            // invoicesLabel
+            // 
+            invoicesLabel.AutoSize = true;
+            invoicesLabel.Font = new Font("Segoe UI", 40F, FontStyle.Bold, GraphicsUnit.Point);
+            invoicesLabel.Location = new Point(3, 242);
+            invoicesLabel.Name = "invoicesLabel";
+            invoicesLabel.Size = new Size(235, 72);
+            invoicesLabel.TabIndex = 3;
+            invoicesLabel.Text = "Invoices";
+            invoicesLabel.Click += invoicesLabel_Click;
+            invoicesLabel.MouseLeave += invoicesLabel_MouseLeave;
+            invoicesLabel.MouseHover += invoicesLabel_MouseHover;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = SystemColors.ControlDark;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(332, 239);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(720, 450);
+            ClientSize = new Size(1088, 450);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "MainForm";
@@ -150,6 +203,9 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -163,5 +219,9 @@
         private Label label3;
         private Label customersLabel;
         private PictureBox pictureBox2;
+        private Panel panel3;
+        private Label label1;
+        private Label invoicesLabel;
+        private PictureBox pictureBox3;
     }
 }
