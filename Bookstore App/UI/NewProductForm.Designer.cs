@@ -120,7 +120,7 @@
             Controls.Add(saveButton);
             Controls.Add(cancelButton);
             Name = "NewProductForm";
-            Text = "NewProductForm";
+            Text = "Bookstore Manager: New Product";
             ResumeLayout(false);
             PerformLayout();
         }

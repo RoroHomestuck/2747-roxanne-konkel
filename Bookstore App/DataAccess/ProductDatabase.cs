@@ -18,6 +18,8 @@ namespace Bookstore_App.DataAccess
         public static List<Product> GetProducts()
         {
             var products = new List<Product>();
+
+
             using StreamReader reader = new(Path.Combine(path, fileName));
 
             while(reader.Peek() != -1)
