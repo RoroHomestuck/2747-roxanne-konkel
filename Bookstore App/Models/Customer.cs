@@ -15,7 +15,7 @@ namespace Bookstore_App.Models
 
         public override string ToString()
         {
-            return $"{FName} {LName} ({Email})";
+            return $"{FName} {LName}, {Email}";
         }
     }
 }
