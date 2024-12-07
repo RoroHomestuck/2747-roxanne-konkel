@@ -2,21 +2,27 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectThree.Models
 {
     public class Employee
     {
-        public int ID { get; set; }
+        [Key]
+        [Required]
+        public int EmployeeID { get; set; }
+        [Required]
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
-        public PhoneAttribute PhoneNumber { get; set; }
-        public EmailAddressAttribute EmailAddress { get; set; }
-        public Address Address { get; set; }
+        public string PhoneNumber { get; set; }
+        [Required]
+        public string EmailAddress { get; set; }
+        [Required]
+        [ForeignKey("AddressID")]
+        public int AddressID { get; set; }
 
-        public ICollection<Patient> Patients { get; set; }
-        public ICollection<Invoice> Invoices { get; set; }
-
+        
     }
 }

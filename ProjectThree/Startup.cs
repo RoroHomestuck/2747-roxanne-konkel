@@ -26,6 +26,7 @@ namespace ProjectThree
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TherapyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
         }
 

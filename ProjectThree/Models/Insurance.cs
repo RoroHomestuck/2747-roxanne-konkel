@@ -5,11 +5,18 @@ namespace ProjectThree.Models
 {
     public class Insurance
     {
-        public int ID { get; set; }
+        [Key]
+        [Required]
+        public int InsuranceID { get; set; }
+        [Required]
         public string Company { get; set; }
-        public PhoneAttribute PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
+        [Required]
         public bool isAccepted { get; set; }
+        [Required]
+        public int AddressID { get; set; }
+
+
         public Address Address { get; set; }
-        public ICollection<Patient> Patients { get; set; }
     }
 }
