@@ -74,7 +74,7 @@ namespace ProjectThree.Data
 
             var invoices = new Invoice[]
             {
-                new Invoice {Price=493.23,SessionMinutes=143,EmployeeID=0,PatientID=0}
+                new Invoice {PatientID=0,EmployeeID=0,Price=10,SessionMinutes=2}
             };
             foreach (Invoice i in invoices)
             {

@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing.Printing;
+using System.Diagnostics;
 
 namespace ProjectThree
 {
@@ -29,8 +31,8 @@ namespace ProjectThree
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<TherapyContext>();
-                    DbInitializer.Initialize(context);
+                    var context2 = services.GetRequiredService<TherapyContext>();
+                    DbInitializer.Initialize(context2);
                 }
                 catch (Exception ex)
                 {

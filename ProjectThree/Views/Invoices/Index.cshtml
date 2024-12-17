@@ -16,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SessionMinutes)
+                Session Minutes
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Employee)
+                Therapist Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Patient)
+                Patient Name
             </th>
             <th></th>
         </tr>
@@ -37,7 +37,7 @@
                 @Html.DisplayFor(modelItem => item.SessionMinutes)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Employee.EmailAddress)
+                @Html.DisplayFor(modelItem => item.Employee.FirstName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Patient.FirstName)

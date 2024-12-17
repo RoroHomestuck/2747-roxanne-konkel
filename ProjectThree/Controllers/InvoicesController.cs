@@ -49,7 +49,7 @@ namespace ProjectThree.Controllers
         // GET: Invoices/Create
         public IActionResult Create()
         {
-            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "EmailAddress");
+            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "FirstName");
             ViewData["PatientID"] = new SelectList(_context.Patients, "PatientID", "FirstName");
             return View();
         }
@@ -67,7 +67,7 @@ namespace ProjectThree.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "EmailAddress", invoice.EmployeeID);
+            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "FirstName", invoice.EmployeeID);
             ViewData["PatientID"] = new SelectList(_context.Patients, "PatientID", "FirstName", invoice.PatientID);
             return View(invoice);
         }
@@ -85,7 +85,7 @@ namespace ProjectThree.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "EmailAddress", invoice.EmployeeID);
+            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "FirstName", invoice.EmployeeID);
             ViewData["PatientID"] = new SelectList(_context.Patients, "PatientID", "FirstName", invoice.PatientID);
             return View(invoice);
         }
@@ -122,8 +122,8 @@ namespace ProjectThree.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "FirstName" + " " + "LastName", invoice.EmployeeID);
-            ViewData["PatientID"] = new SelectList(_context.Patients, "PatientID", "FirstName" + " " + "LastName", invoice.PatientID);
+            ViewData["EmployeeID"] = new SelectList(_context.Employees, "EmployeeID", "FirstName", invoice.EmployeeID);
+            ViewData["PatientID"] = new SelectList(_context.Patients, "PatientID", "FirstName", invoice.PatientID);
             return View(invoice);
         }
 

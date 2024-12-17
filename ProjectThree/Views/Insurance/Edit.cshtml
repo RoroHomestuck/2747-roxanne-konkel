@@ -19,13 +19,13 @@
                 <span asp-validation-for="Company" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
+                <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="isAccepted" /> @Html.DisplayNameFor(model => model.isAccepted)
+                    <input class="form-check-input" asp-for="isAccepted" /> Accepted?
                 </label>
             </div>
             <div class="form-group">
